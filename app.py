@@ -12,7 +12,7 @@ Bootstrap(app)
 search_key = "ALPHA"   #should be dynamic when deployed
 options = Options()
 options.headless = True
-browser = webdriver.Chrome("/Review_web/chromedriver", options=options)
+browser = webdriver.Chrome("/Users/jithinjohn/Documents/GitHub/IH_Admin/chromedriver", options=options)
 
 missing_values = {}
 mapped = {}
@@ -64,7 +64,7 @@ def main_review():
     #                 print("error found")
     #                 print(master_key, " ", key, " ", value)
 
-@app.route('/review', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     url = "https://portfolio.irishhomes.ie/Portal/ViewProperties.aspx"
     browser.get(url)
